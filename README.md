@@ -6,11 +6,14 @@ The code is used to perform the numerical simulation and visualization. For more
 
 ## Describtion
 
+The project propose a Iterative structural coarse-graining method to reduce the size of network and preserve the dynamical behavior of SIR model.
+
+
 ## Content 
 
 ## Install and Run
 
-## Suggestion
+## Email
 
 Any suggestion are welcome and please send your suggestion to hsuehleyang@gmail.com
 
