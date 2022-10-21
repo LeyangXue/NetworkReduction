@@ -349,29 +349,6 @@ def TheoryResult():
     
     return  theoriticalValue
 
-def InfectCriticalCondition(theoritical_result):
-    '''
-    calculate the least infection probability (\hat{beta_k}) required for occupying all nodes in the k-clique by one infected node
-
-    Parameters
-    ----------
-    theoritical_result : array
-        analytical results
-
-    Returns
-    -------
-    sizeClique : dict
-        \hat{beta_k}.
-
-    '''
-    sizeClique ={}
-    beta = np.arange(0,1.01,0.01)
-    for i in np.arange(theoritical_result.shape[1]):
-        cr = beta[min(np.where(theoritical_result[:,i]>0.995)[0])]
-        sizeClique[i+2] = round(cr,2)
-    
-    return sizeClique
-
 def InfectCriticalCondition_N(theoritical_result,n):
     '''
     calculate the least infection probability (\hat{beta_k}) required for occupying all nodes in the k-clique by n infected node
@@ -516,7 +493,7 @@ def PlotOccupyProb(ax,path,theoritical_result):
 
     '''
     simulation_result = cg.load(path + '/20_1_occupy_probability')
-    ct = InfectCriticalCondition(theoritical_result)
+    ct = cg.InfectCriticalCondition(theoritical_result)
     x= np.arange(0,101,4)
     colors = plt.get_cmap('Paired')
     mec_color = 'black'
@@ -564,10 +541,10 @@ def PlotBetaT(ax,path):
     simulation_result_05 = cg.load(path + '/20_0.5_occupy_probability')
     simulation_result_08 = cg.load(path + '/20_0.8_occupy_probability')
 
-    ct10 = InfectCriticalCondition(simulation_result_10)
-    ct02 = InfectCriticalCondition(simulation_result_02)
-    ct05 = InfectCriticalCondition(simulation_result_05)
-    ct08 = InfectCriticalCondition(simulation_result_08)
+    ct10 = cg.InfectCriticalCondition(simulation_result_10)
+    ct02 = cg.InfectCriticalCondition(simulation_result_02)
+    ct05 = cg.InfectCriticalCondition(simulation_result_05)
+    ct08 = cg.InfectCriticalCondition(simulation_result_08)
 
     marker_size = 10
     alp = 1
