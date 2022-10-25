@@ -15,7 +15,9 @@ def InitNeighbors(G):
         neighbors_dic[n.GetId()] = set(n.GetOutEdges())
 
 def my_copy(d):
+
     return cPickle.loads(cPickle.dumps(d, -1))
+    
 #print neighbors_dic
 
 #def Minus(s1,s2):
