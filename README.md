@@ -12,7 +12,7 @@ The iterative structural coarse-graining method is applied to the problem of rea
 
 ## Content 
 
-All files used to perform the numerical simulation and plot the figure of the manuscript are provided in each directory. They are divided into different sub directory, such as network, code, result, and figure.
+All scripts used to perform the numerical simulation and plot the figure of the manuscript are provided in each directory. Contents are divided into different sub directory, such as network, code, result, and figure.
 
 * code  
 The file contains the code (main.py) to run the numerical simulation and plot the figure, please correct the current path if run the code
@@ -26,7 +26,7 @@ The file contains the result of numerical simulation
 * figure  
 The file contains the figure 
 
-All common codes is organized into the packages, e.g. coarse_grain.py, lised in utils files.
+All common codes are organized into the packages, e.g. coarse_grain.py, lised in utils files.
 The utils contains four packages:
 
 * coarse_grain.py  
@@ -37,10 +37,10 @@ The package is used to identify the k-plex structure in the network.
 The package can be ignored if do not run the approximately coarse-graining code
 
 * prunconnected.py  
-The package provide the basic function for kplexes.py.  
+The package provides the basic function for kplexes.py.  
 
 * noprun.py  
-The package provide the basic function for kplexes.py.  
+The package provides the basic function for kplexes.py.  
 
 ## Install and Run
 
@@ -68,7 +68,12 @@ $ git clone https://github.com/LeyangXue/InnovationDiffusion.git
   + pandas 
   + scipy
   + powerlaw 
-  + sympy
+  + sympy   
+
+  please check the dependence of package before runing the code. If you need to install the packages: pip install (package)  
+
+* change the value of root_path  in each script as current local path  
+root_path  = '/current_path'
 
 ## Email
 
