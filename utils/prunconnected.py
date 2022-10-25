@@ -4,7 +4,7 @@ import sets
 import itertools
 from itertools import chain
 import time
-import _pickle as cPickle
+import pickle as cPickle
 
 start = 0
 
