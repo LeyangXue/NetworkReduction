@@ -285,7 +285,7 @@ def PlotWeightSpread(ax,path,Scliques):
         ax.plot(alphas[x],rwmcs[:,i][x],'o',ms=markersize, color=colors(i),alpha=alp, mec=mec_color,mew=mew,label = 'k='+str(sclique+1))
         
     ax.plot(alphas[x],omc[x],'-',lw=2,color='black',label='O')
-    cg.PlotAxes(ax,r'$\beta$',r'$\rho^R$','a')
+    cg.PlotAxes(ax,r'$\beta$',r'$\rho$','a')
     ax.legend(loc='best',framealpha=0, fontsize=n_legend)
 
     #subfig1
@@ -480,7 +480,7 @@ def PlotBtNnode(ax,resultpath,index,name):
     
     betaTNnode = cg.load(resultpath+'/betaTtoNnode')
     ax.plot(betaTNnode.keys(),betaTNnode.values(),color = colors(2*index+1),label=name,ls='--')
-    cg.PlotAxes(ax,r'$\hat{\beta}$',r'$\frac{N_r}{N_o}$(node)','d')
+    cg.PlotAxes(ax,r'$\beta$',r'$\frac{N_r}{N_o}$(node)','d')
     ax.legend(loc='lower left',framealpha=0, fontsize=n_legend)
 
 def PlotBtNedge(ax,resultpath,index,name): 
@@ -508,7 +508,7 @@ def PlotBtNedge(ax,resultpath,index,name):
 
     betaTNedge = cg.load(resultpath+'/betaTtoNedge')
     ax.plot(betaTNedge.keys(),betaTNedge.values(),color = colors(2*index+1),label=name)
-    cg.PlotAxes(ax,r'$\hat{\beta}$',r'$\frac{E_r}{E_o}$(edge)','e')
+    cg.PlotAxes(ax,r'$\beta$',r'$\frac{E_r}{E_o}$(edge)','e')
     #ax.legend(loc='upper right',framealpha=0, fontsize=n_legend)
 
 def PlotDpRsize(ax,resultpath,Scliques,netIndex,Nnode,Nedge,i):
