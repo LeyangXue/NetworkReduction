@@ -6,7 +6,7 @@ Created on Mon Oct 24 16:51:01 2022
 """
 
 #please change the current path if run the code
-root_path  = 'F:/work/work5_reductionability'
+root_path  = 'G:/work/work5_reductionability'
 
 import sys
 sys.path.append(root_path+'/NetworkReduction')
