@@ -148,7 +148,7 @@ if __name__ == '__main__':
     
     #ax[2].annotate(r'$p(A \rightarrow F|G_o)=p(A \rightarrow F|G_r)$', xy=(0.38, 0.5), xytext=(0, 0.35),arrowprops=dict(arrowstyle="->"),color =mec_color)
     #ax[0].set_title(r'(a) $G$',fontdict=font_label)
-    ax[1].text(0.06,0.35,r'4-clique $\rightarrow$ Node:H',fontdict=font_label)
+    ax[1].text(0.06,0.35,r'4-clique $\rightarrow$ Supernode:H',fontdict=font_label)
     #ax[1].set_title(r'(b) $G_{R=4}$',fontdict=font_label)
     fontsize = 15
     nx.draw(G,pos={'A':[0.9,0],'B':[0.6,0.3],'C':[0.4,0.3],'D':[0.4,0.5],'E':[0.6,0.5],'F':[0.1,0.8]},ax=ax[0],node_size=500,edge_color=mec_color,with_labels=True,font_color='white',font_size=fontsize)
